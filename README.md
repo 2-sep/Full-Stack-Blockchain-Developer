@@ -48,7 +48,7 @@ m / purpose' / coin' / account' / change / address_index
 
 - #### pow
 
-​ 竞争找到随机数 nonce
+竞争找到随机数 nonce
 
 - #### PoS
 
@@ -58,25 +58,25 @@ https://www.youtube.com/watch?v=lyEibZhcsCU
 
 **PBFT**
 
-​ 当收到 2/3 以上的同种票后，网络中的节点们达成了共识
+当收到 2/3 以上的同种票后，网络中的节点们达成了共识
 
-​ merge:beacoin chain 和主网合并以切换到 PoS
+merge:beacoin chain 和主网合并以切换到 PoS
 
 **validator pool**
 
-​ (1)提议: leader 怎么选择？
+(1)提议: leader 怎么选择？
 
-​ (2)投票: validator 造假怎么办？
+(2)投票: validator 造假怎么办？
 
-​ (3)出结果
+(3)出结果
 
 **VRF 抽奖**
 
 **Gasper**机制解决 Finalization 问题
 
-​ 设定 1：投票可以跨区块
+设定 1：投票可以跨区块
 
-​ 设定 2：违反相关规定的 validator 将被罚没所有的 staking 资产
+设定 2：违反相关规定的 validator 将被罚没所有的 staking 资产
 
 - DPoS 委托权益证明机制
 
@@ -100,9 +100,9 @@ https://www.youtube.com/watch?v=lyEibZhcsCU
 
 抗碰撞性
 
-​ 弱抗碰撞性：给定一个消息`x`，找到另一个消息`x'`使得`hash(x) = hash(x')`是困难的
+弱抗碰撞性：给定一个消息`x`，找到另一个消息`x'`使得`hash(x) = hash(x')`是困难的
 
-​ 强抗碰撞性：找到任意`x`和`x'`，使得`hash(x) = hash(x')`是困难的
+强抗碰撞性：找到任意`x`和`x'`，使得`hash(x) = hash(x')`是困难的
 
 - ### **ECDSA 椭圆曲线签名算法**
 
@@ -128,11 +128,11 @@ secp256k1 y<sup>2</sup> = x<sup>3</sup> + 7
 
 合约账户（CA）
 
-​ nonce | balance | storage hash（状态变量）|code hash（代码）
+nonce | balance | storage hash（状态变量）|code hash（代码）
 
 外部账户（EOA）
 
-​ balance | nonce
+balance | nonce
 
 区别：合约账户不受私钥控制，无法自己发起交易，有自己的代码逻辑
 
@@ -170,13 +170,13 @@ Ether = 10\*\*18 Wei
 
 哈希表的缺点
 
-​ 节点间维护共识的工作量很大
+节点间维护共识的工作量很大
 
 Merkle Tree 的缺点
 
-​ 账户顺序的不同形成完全不同的子树，hash 值不同，无法完成共识
+账户顺序的不同形成完全不同的子树，hash 值不同，无法完成共识
 
-​ 只多一个新账户，大半个颗树需要重构
+只多一个新账户，大半个颗树需要重构
 
 前置知识点：Trie-字典树/前缀树
 
@@ -253,17 +253,17 @@ Layer2 的数据压缩后上传到 Layer1，由 Layer1 保证数据可用性
 
 Fraud Proof 欺诈证明
 
-​ Layer2 同步给以太网主网的过程中，如果有人认为被同步的数据不准确（即存在欺诈行为），便可在挑战期内发出挑战，通过 Layer1 智能合约计算并裁决出谁是欺诈者，再作出处罚。
+Layer2 同步给以太网主网的过程中，如果有人认为被同步的数据不准确（即存在欺诈行为），便可在挑战期内发出挑战，通过 Layer1 智能合约计算并裁决出谁是欺诈者，再作出处罚。
 
-​ Arbiturm(Optimistic Roll-Up)
+Arbiturm(Optimistic Roll-Up)
 
-​ 对仲裁过程进行了创新和优化。
+对仲裁过程进行了创新和优化。
 
 - Zero Knowledge Roll-Up 零知识证明卷叠
 
 Validity Proof 有效性证明
 
-​ 将聚合的交易，使用零知识证明生成一个简洁的证明文件，证明有效性。
+将聚合的交易，使用零知识证明生成一个简洁的证明文件，证明有效性。
 
 ### 零知识证明 ZKP
 
@@ -1717,7 +1717,7 @@ Memory 数据结构：简单的字节数组
 
 读取：只能以 32 字节为单位读取
 
-​ 读取可以从任意字节处开始读取
+读取可以从任意字节处开始读取
 
 ![image-20230720145953327](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230720145953327.png)
 
@@ -1789,7 +1789,7 @@ https://learnblockchain.cn/article/4167#%E5%87%8F%E5%B0%91%E5%AF%B9%E5%A4%96%E9%
 
 **1 constant immutable 与 变量**
 
-​ 对不变量，使用 constant 和 immutable 定义
+对不变量，使用 constant 和 immutable 定义
 
 2 calldata memory
 
@@ -1797,17 +1797,17 @@ https://learnblockchain.cn/article/4167#%E5%87%8F%E5%B0%91%E5%AF%B9%E5%A4%96%E9%
 
 **4 Unchecked **
 
-​ 在安全性可控的情况下，使用 unchecked
+在安全性可控的情况下，使用 unchecked
 
 **5 Uint**
 
-​ 尽量变量打包，如果不能打包还是使用 uint256
+尽量变量打包，如果不能打包还是使用 uint256
 
 6 Error
 
 **7 LocalData 局部变量**
 
-​ 在较复杂的运算中，避免直接操作存储变量，可以先定义一个局部变量，对局部变量进行修改后，再修改存储变量
+在较复杂的运算中，避免直接操作存储变量，可以先定义一个局部变量，对局部变量进行修改后，再修改存储变量
 
 **8 clone 替换 new/create2**
 
@@ -1815,29 +1815,29 @@ https://learnblockchain.cn/article/4167#%E5%87%8F%E5%B0%91%E5%AF%B9%E5%A4%96%E9%
 
 **10 Increment 使用更好的递增**
 
-​ 使用 ++i，而不是 i++
+使用 ++i，而不是 i++
 
 **11 使用 uint 进行重入保护**
 
-​ bool ×
+bool ×
 
-​ uint 0 1，0 改 非 0 会消耗较多的 gas ×
+uint 0 1，0 改 非 0 会消耗较多的 gas ×
 
-​ uint 1 2，非 0 改非 0 √
+uint 1 2，非 0 改非 0 √
 
 12 LessThan
 
 **13 MethodName 优化方法名**
 
-​ EVM 执行交易，calldata 数据消耗 gas，0 字节消耗 4gas，非 0 字节消耗 16gas
+EVM 执行交易，calldata 数据消耗 gas，0 字节消耗 4gas，非 0 字节消耗 16gas
 
-​ 优化函数名，增加 MethodId 中 0 字节的个数来节省 gas
+优化函数名，增加 MethodId 中 0 字节的个数来节省 gas
 
 **14 MethodIdSort**
 
-​ 合约内所有函数是一个数组，通过 MethodId 排序
+合约内所有函数是一个数组，通过 MethodId 排序
 
-​ 遍历,找到想调用的函数
+遍历,找到想调用的函数
 
 # Ethers.js API
 
@@ -2460,11 +2460,9 @@ B 合约 delegatecallC 合约，执行的是 B 的环境改变，改变的也是
 
 门 3：类型转换
 
-​ https://www.tutorialspoint.com/solidity/solidity_conversions.htm
+https://www.tutorialspoint.com/solidity/solidity_conversions.htm
 
-​ https://learnblockchain.cn/docs/solidity/types.html#types-conversion-elementary-types
-
-​
+https://learnblockchain.cn/docs/solidity/types.html#types-conversion-elementary-types
 
 **14_GatekeeperTwo**
 
@@ -2554,7 +2552,7 @@ keccak256(1)+ X = 0 = 2^256-1 + 1
 
 库合约：UpgradeableProxy.sol
 
-​ Proxy.sol
+Proxy.sol
 
 解题思路：
 
@@ -2654,17 +2652,17 @@ https://github.com/bzpassersby/Damn-Vulnerable-Defi-V3-Solutions
 
 import 合约:
 
-​ solmate/utils/FixedPointMathLib.sol 数学库
+solmate/utils/FixedPointMathLib.sol 数学库
 
-​ solmate/utils/ReentrancyGuard.sol 防重入攻击库
+solmate/utils/ReentrancyGuard.sol 防重入攻击库
 
-​ { SafeTransferLib, ERC4626, ERC20 } from "solmate/mixins/ERC4626.sol" 安全转账，**ERC4626 代币金库话**，ERC20
+{ SafeTransferLib, ERC4626, ERC20 } from "solmate/mixins/ERC4626.sol" 安全转账，**ERC4626 代币金库话**，ERC20
 
-​ solmate/auth/Owned.sol 权限控制
+solmate/auth/Owned.sol 权限控制
 
-​ openzeppelin-contracts/contracts/interfaces/IERC3156.sol
+openzeppelin-contracts/contracts/interfaces/IERC3156.sol
 
-​ **ERC3156**
+**ERC3156**
 
 思路：**闪电贷** UnstoppableVault.flashLoan 的 flashLoan()中，if (convertToShares(totalSupply) != balanceBefore) revert InvalidBalance();
 
@@ -2688,7 +2686,7 @@ TrusterLenderPool 的 flashLoan 方法，没有对 target 校验。利用 functi
 
 目标合约地址.call{value:发送数额, gas:gas 数额}(字节码);
 
-​ abi.encodeWithSignature("函数签名", 逗号分隔的具体参数)
+abi.encodeWithSignature("函数签名", 逗号分隔的具体参数)
 
 **4_Side Entrance**
 
@@ -2875,9 +2873,9 @@ forge clean
 
 forge inspect
 
-​ forge inspect XXX mi
+forge inspect XXX mi
 
-​ forge inspect XXX slot
+forge inspect XXX slot
 
 #### Test 命令
 
@@ -2887,7 +2885,7 @@ forge test --gas-report
 
 forge snapshot （Gas 快照）
 
-​ --diff
+--diff
 
 #### 作弊码 vm
 
@@ -2927,25 +2925,25 @@ label 调用栈显示别名，代替地址
 
 **Transaction 命令**
 
-​ cast estimate
+cast estimate
 
 **ABI 命令**
 
-​ cast abi-encode 对调用的参数进行 ABI 编码
+cast abi-encode 对调用的参数进行 ABI 编码
 
-​ cast 4byte 0x8cc5ce99 获取选择器的函数签名(数据库)
+cast 4byte 0x8cc5ce99 获取选择器的函数签名(数据库)
 
-​ cast 4byte-decode 对调用的 calldata 进行解码
+cast 4byte-decode 对调用的 calldata 进行解码
 
-​ cast calldata 编码带参数的函数
+cast calldata 编码带参数的函数
 
-​ cast pretty-calldata 分割 calldata
+cast pretty-calldata 分割 calldata
 
 **Utility 命令**
 
-​ cast sig 函数签名
+cast sig 函数签名
 
-​ cast keccak
+cast keccak
 
 ## Anvil 创建本地测试网节点
 
@@ -2957,7 +2955,7 @@ Std Assertions
 
 Console Logging
 
-​ console.logBytes32()
+console.logBytes32()
 
 **DSTest**
 
@@ -3056,9 +3054,9 @@ import "hardhat/console.log" 可以在智能合约中，console.log()
 
 2.安装 dotenv
 
-​ 在配置文件中引用
+在配置文件中引用
 
-​ require('dotenv').config()
+require('dotenv').config()
 
 3.配置文件完整内容
 
@@ -3076,21 +3074,17 @@ x \* y = K
 
 **2.2 价格预言机**
 
-​ https://zhuanlan.zhihu.com/p/359750357 如何使用 Uniswap v2 作为预言机
+https://zhuanlan.zhihu.com/p/359750357 如何使用 Uniswap v2 作为预言机
 
-​ 在每个区块的第一笔交易前记录**累计价格**实现预言机，时间权重记录
+在每个区块的第一笔交易前记录**累计价格**实现预言机，时间权重记录
 
-​ TWAP 算术平均数
+TWAP 算术平均数
 
-​ 两个难题：1. 应该计算以 B 代币计价的 A 代币价格，还是以 A 代币计价的 B 代币价格？ 2.用户可以不通过交易而直接向交易对合约发送代币（这将改变代币余额并影响价格），此时将无法触发预言机价格更新
+两个难题：1. 应该计算以 B 代币计价的 A 代币价格，还是以 A 代币计价的 B 代币价格？ 2.用户可以不通过交易而直接向交易对合约发送代币（这将改变代币余额并影响价格），此时将无法触发预言机价格更新
 
-​
+价格精度：UQ112.112 格式的数据，它表示在小数点的左右两边都有 112 位比特表示精度 **Solidity 原生不支持非整数数据类型**
 
-​ 价格精度：UQ112.112 格式的数据，它表示在小数点的左右两边都有 112 位比特表示精度 **Solidity 原生不支持非整数数据类型**
-
-​ 112+112+32 = 256
-
-​
+112+112+32 = 256
 
 **2.3 闪电贷**
 
@@ -3101,8 +3095,6 @@ x \* y = K
 **3.4 初始化流动性代币供应**
 
 **3.5 Wrapping ETH - WETH**
-
-​
 
 **3.6 确定的交易对地址 Wrapping ETH - WETH**
 
@@ -3140,8 +3132,6 @@ function burn()
 **swap() **
 
 兼容闪电贷，先转出代币
-
-​
 
 #### 3.periphery
 
@@ -3219,11 +3209,11 @@ v3 曲线是将 v2 曲线沿横坐标和纵坐标平移一定单位
 
 **3.1 Multiple Pools Per Pair 多池交易对**
 
-​ 每个交易对有多个池子，分别设置不同的交易手续费。
+每个交易对有多个池子，分别设置不同的交易手续费。
 
 **3.2 Non-Fungible Liquidity 不可互换的流动性**
 
-​ 手续费不像 v2 是复利的，v3 的流动性是一个 NFT
+手续费不像 v2 是复利的，v3 的流动性是一个 NFT
 
 #### 4 Governance 治理
 
@@ -3349,21 +3339,21 @@ NonfungiblePositionManager.sol 头寸管理合约
 
 坚持
 
-​ 恒定积公式 x \* y = k
+恒定积公式 x \* y = k
 
-​ 限价流动性基于 tick 刻度体系
+限价流动性基于 tick 刻度体系
 
-​ 流动性堆叠
+流动性堆叠
 
 革新
 
-​ 全新的合约架构
+全新的合约架构
 
-​ 巧妙地账本设计
+巧妙地账本设计
 
-​ 更高的开发者自由度
+更高的开发者自由度
 
-​ 对流动性提供者更多的保护
+对流动性提供者更多的保护
 
 https://learnblockchain.cn/article/6006
 
@@ -3387,11 +3377,7 @@ APY 复利年收益率
 
 ![image-20230808011919502](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230808011919502.png)
 
-​
-
 **cToken** exchangeRate 兑换率
-
-​
 
 ###
 
@@ -3674,11 +3660,11 @@ EIP-4844 Proto-Danksharding
 
 **原生协议内优化存储成本**
 
-​ **Proto-Danksharding(EIP-4844)**
+**Proto-Danksharding(EIP-4844)**
 
-​ 提议者-构建者分离(PBS)
+提议者-构建者分离(PBS)
 
-​ 完整分片（Danksharding）
+完整分片（Danksharding）
 
 # Openzepplin/solmate 库
 
@@ -3704,27 +3690,27 @@ https://blog.wssh.trade/posts/erc721a-contract/
 
 **ERC777**
 
-​ https://learnblockchain.cn/2019/09/27/erc777
+https://learnblockchain.cn/2019/09/27/erc777
 
-​ ERC 1820
+ERC 1820
 
 **ERC-3156 闪电贷**
 
 ERC3156FlashLender
 
-​ function maxFlashLoan(address token) external view returns (uint256);
+function maxFlashLoan(address token) external view returns (uint256);
 
-​ function flashFee(address token, uint256 amount) external view returns (uint256);
+function flashFee(address token, uint256 amount) external view returns (uint256);
 
-​ function flashLoan(
+function flashLoan(
 
-​ IERC3156FlashBorrower receiver,
+IERC3156FlashBorrower receiver,
 
-​ address token,
+address token,
 
-​ uint256 amount,
+uint256 amount,
 
-​ bytes calldata data
+bytes calldata data
 
 ) external returns (bool);
 
@@ -3732,15 +3718,15 @@ ERC3156FlashBorrower
 
 function onFlashLoan(
 
-​ address initiator,
+address initiator,
 
-​ address token,
+address token,
 
-​ uint256 amount,
+uint256 amount,
 
-​ uint256 fee,
+uint256 fee,
 
-​ bytes calldata data
+bytes calldata data
 
 ) external returns (bytes32);
 
@@ -3949,8 +3935,6 @@ file:///C:/Users/Administrator/Desktop/%E7%99%BB%E9%93%BE%E8%AF%BE%E4%BB%B6/w6-1
 
 interface AggregatorV3Interface {
 
-​
-
 }
 
 **合约自动化调用工具**
@@ -4013,8 +3997,6 @@ https://m.rstrstrst.com/api/metadata/42/9142
 t.me/bucypredictionbot
 
 HTTP API
-
-6429589658:AAH2CzjvoW78Bmw8rOdpQhaOkBwDqdQ6osY
 
 **BotFather 领机器人**
 
@@ -4108,11 +4090,11 @@ https://www.bilibili.com/video/BV16D4y167TT/?spm_id_from=333.788.recommend_more_
 
 CREATE TABLE accounts_record(
 
-​ chatid INT PRIMARY KEY,
+chatid INT PRIMARY KEY,
 
-​ address VARCHAR(42)
+address VARCHAR(42)
 
-​ privateKey VARCHAR(64)
+privateKey VARCHAR(64)
 
 );
 
@@ -4261,7 +4243,7 @@ never
 
 interface 和 抽象类的区别
 
-​ 接口不能有实现
+接口不能有实现
 
 **泛型**
 
@@ -4339,7 +4321,7 @@ class Ride {
 
 方法重写
 
-​ override
+override
 
 多态
 
@@ -4668,7 +4650,7 @@ npm install -g @graphprotocol/graph-cli 全局安装
 
 -src
 
-​ -xxx.ts // 定义索引规则
+-xxx.ts // 定义索引规则
 
 -subgraph.yaml // 配置
 
@@ -4851,19 +4833,19 @@ pq.add(node);
 
 （1）数组（顺序存储）
 
-​ 紧凑连续存储
+紧凑连续存储
 
-​ 随机访问
+随机访问
 
-​ 在数组中间进行插入和删除，时间复杂度 O（N）
+在数组中间进行插入和删除，时间复杂度 O（N）
 
 （2）链表（链式存储）
 
-​ 元素不连续，靠指针指向下一个元素的位置
+元素不连续，靠指针指向下一个元素的位置
 
-​ 不能随机访问
+不能随机访问
 
-​ 增删的时间复杂度 O（1）
+增删的时间复杂度 O（1）
 
 ## 数据结构的基本操作
 
@@ -5117,7 +5099,7 @@ ListNode middleNode(ListNode head) {
 
 快慢指针:有序数组/链表去重
 
-​ 滑动窗口的快慢指针
+滑动窗口的快慢指针
 
 ##### 一、有序数组/链表去重
 
@@ -5452,7 +5434,7 @@ void traverse(TreeNode root){
 
 优化：节点多记录一个信息： int size;
 
-​ 以该节点为根的树的节点总数
+以该节点为根的树的节点总数
 
 ```java
 int kthSmallest(TreeNode root, int k) {
@@ -6261,23 +6243,23 @@ git rebase xxx
 
 强制移动分支
 
-​ git branch -f main HEAD~3
+git branch -f main HEAD~3
 
 撤销变更
 
-​ git reset HEAD~1
+git reset HEAD~1
 
-​ git revert HEAD
+git revert HEAD
 
 3.自由修改提交树
 
 Git Cherry-pick
 
-​ git cherry-pick xxx xxx xxx
+git cherry-pick xxx xxx xxx
 
 交互式 rebase
 
-​ git rebase -i HEAD~4
+git rebase -i HEAD~4
 
 4.Git 技术、技巧与贴士大集合
 
@@ -6314,7 +6296,7 @@ Git Fetch-从远程仓库获取数据
 
 Git Pull
 
-​ git pull = git fetch + git merge
+git pull = git fetch + git merge
 
 模拟团队合作
 
