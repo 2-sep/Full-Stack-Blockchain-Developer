@@ -12,3 +12,9 @@ https://learnblockchain.cn/article/6218 使用go开发区块链
 https://learnblockchain.cn/article/3446 从零开发区块链应用
 
 # 语法
+go version 查看版本
+
+go mod init <>
+go get xxx
+
+package main
